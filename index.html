@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Book Search</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-gray-100 min-h-screen flex flex-col items-center p-4">
+		<h1 class="text-3xl font-bold mb-6">Perpus Upgraded</h1>
+		<div class="w-full max-w-md mx-auto">
+			<div class="flex mb-4">
+				<input
+					id="searchInput"
+					type="text"
+					placeholder="Enter book title or author"
+					class="flex-1 p-2 border rounded-l-md border-gray-300" />
+				<button
+					id="searchButton"
+					class="p-2 bg-blue-500 text-white rounded-r-md">
+					Search
+				</button>
+			</div>
+			<div id="bookList" class="space-y-4"></div>
+		</div>
+		<!-- Untuk Modal -->
+		<div
+			id="bookModal"
+			class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+			<div
+				class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full m-auto my-8">
+				<button
+					id="closeModal"
+					class="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-5xl">
+					&times;
+				</button>
+				<h2 id="modalTitle" class="text-xl font-bold mb-4"></h2>
+				<p id="modalAuthor" class="mb-2"></p>
+				<p id="modalDescription" class="mb-2"></p>
+				<p id="modalPages" class="mb-2"></p>
+				<p id="modalPrice" class="mb-2"></p>
+			</div>
+		</div>
+		<!-- End Modal -->
+		<script src="app.js"></script>
+	</body>
+</html>
